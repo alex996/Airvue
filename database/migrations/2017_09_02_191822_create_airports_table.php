@@ -22,7 +22,7 @@ class CreateAirportsTable extends Migration
             $table->char('country', 2);
             $table->decimal('lat', 12, 9);
             $table->decimal('long', 12, 9);
-            $table->unsignedSmallInteger('elevation');
+            $table->smallInteger('elevation')->nullable();
             $table->string('timezone');
             $table->timestamps();
         });
