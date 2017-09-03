@@ -15,7 +15,7 @@ class CreateAirportsTable extends Migration
     {
         Schema::create('airports', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('icao', 4);
+            $table->char('icao', 4)->unique();
             $table->char('iata', 3)->nullable();
             $table->string('name');
             $table->string('city');

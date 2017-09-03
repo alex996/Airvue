@@ -22,3 +22,6 @@ Route::apiResource('airports', 'AirportController')->only(['index', 'show']);
 
 // Flights
 Route::apiResource('flights', 'FlightController')->only(['index', 'show']);
+
+// Trips
+Route::apiResource('trips', 'TripController')->only(['store']);

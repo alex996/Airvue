@@ -16,6 +16,26 @@ class Airport extends Model
 		'long' => 'float'
 	];
 
+	/**
+     * Get the value of the model's route key.
+     *
+     * @return mixed
+     */
+	public function getRouteKey()
+	{
+		return $this->icao;
+	}
+	
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+    	return 'icao';
+    }
+
 	public function departures()
 	{
 		return $this->hasMany(Flight::class, 'origin_id');
