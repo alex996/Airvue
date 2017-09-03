@@ -10,15 +10,34 @@ class FlightTest extends TestCase
 {
 	use RefreshDatabase;
 
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testItPaginatesFlights()
+    {
+        // Given
+        $flights = factory(Flight::class, 100)->create();
+
+        // When
+        $response = $this->getJson(route('flights.index'));
+
+        // Then
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    [
+                        'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+                    ]
+                ]
+            ]);
+    }
+
     public function testItReturnsFlightById()
     {
         // Given
-        $airports = factory(Airport::class, 2)->create();
-
-        $flight = factory(Flight::class)->create([
-        	'origin_id' => $airports->first()->id,
-        	'destination_id' => $airports->last()->id
-        ]);
+        $flight = factory(Flight::class)->create();
 
         // When
         $response = $this->getJson(route('flights.show', $flight));

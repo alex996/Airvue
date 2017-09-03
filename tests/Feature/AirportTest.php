@@ -15,7 +15,7 @@ class AirportTest extends TestCase
      *
      * @return void
      */
-    public function testItListsAirportsAlphabetically()
+    public function testItPaginatesAirportsAlphabetically()
     {
         // Given
     	$airports = factory(Airport::class, 100)->create();

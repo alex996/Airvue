@@ -15,28 +15,9 @@ class FlightController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $flights = Flight::with('origin', 'destination')->orderBy('number')->paginate(100);
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return FlightResource::collection($flights);
     }
 
     /**
@@ -50,39 +31,5 @@ class FlightController extends Controller
         $flight->load('origin', 'destination');
 
         return new FlightResource($flight);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Flight  $flight
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Flight $flight)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Flight  $flight
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Flight $flight)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Flight  $flight
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Flight $flight)
-    {
-        //
     }
 }

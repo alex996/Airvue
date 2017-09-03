@@ -8,8 +8,6 @@ $factory->define(Flight::class, function (Faker $faker) {
 	static $origin_id;
 	static $destination_id;
 
-	list($originId, $destinationId) = Airport::inRandomOrder()->take(2)->pluck('id');
-
 	$departedAt = Carbon::instance($faker->dateTimeBetween(
 		Carbon::now()->toDateTimeString(),
 		Carbon::now()->addYear()->toDateTimeString()
@@ -19,8 +17,8 @@ $factory->define(Flight::class, function (Faker $faker) {
 	$minutes = $faker->numberBetween(1, 59);
 
     return [
-        'origin_id' => $origin_id ?: $originId,
-        'destination_id' => $destination_id ?: $destinationId,
+        'origin_id' => $origin_id ?: factory(Airport::class)->create()->id,
+        'destination_id' => $destination_id ?: factory(Airport::class)->create()->id,
         'departed_at' => $departedAt->toDateTimeString(),
         'arrived_at' => $departedAt->addHours($hours)->addMinutes($minutes)->toDateTimeString(),
         'hours' => $hours,
