@@ -10,11 +10,6 @@ class FlightTest extends TestCase
 {
 	use RefreshDatabase;
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function testItPaginatesFlights()
     {
         // Given

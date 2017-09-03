@@ -10,11 +10,6 @@ class AirportTest extends TestCase
 {
 	use RefreshDatabase;
 	
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function testItPaginatesAirportsAlphabetically()
     {
         // Given
