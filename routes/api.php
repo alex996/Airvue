@@ -24,7 +24,7 @@ Route::apiResource('airports', 'AirportController')->only(['index', 'show']);
 Route::apiResource('flights', 'FlightController')->only(['index', 'show']);
 
 // Trips
-Route::apiResource('trips', 'TripController')->only(['store', 'show']);
+Route::apiResource('trips', 'TripController')->only(['store', 'show', 'destroy']);
 
 // Flight Trips
 Route::post('trips/{trip}/flights/{flight}', 'FlightTripController@store')->name('flight-trips.store');

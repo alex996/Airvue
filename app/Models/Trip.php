@@ -16,10 +16,17 @@ class Trip extends Model
 	    parent::boot();
 
 	    /**
-	     * Whenever a Trip instance is created, assign a uid to it.
+	     * Whenever a Trip instance is being created, assign a uid to it.
 	     */
 	    static::creating(function($trip) {
 	        $trip->uid = uniqid();
+	    });
+
+	    /**
+	     * Whenever a Trip instance is being deleted, detach its flights.
+	     */
+	    static::deleting(function($trip) {
+	    	$trip->flights()->detach();
 	    });
 	}
 

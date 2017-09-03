@@ -17,7 +17,7 @@ class FlightTripTest extends TestCase
         $trip = factory(Trip::class)->create();
 
         // When
-        $response = $this->postJson(route('flight-trips.store', compact('trip', 'flight')), []);
+        $response = $this->postJson(route('flight-trips.store', compact('trip', 'flight')));
 
         // Then
         $response->assertStatus(201)
@@ -45,7 +45,7 @@ class FlightTripTest extends TestCase
     	$trip->addFlight($flight);
 
     	// When
-    	$response = $this->postJson(route('flight-trips.store', compact('trip', 'flight')), []);
+    	$response = $this->postJson(route('flight-trips.store', compact('trip', 'flight')));
 
     	// Then
     	$response->assertStatus(400);

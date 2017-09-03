@@ -13,7 +13,7 @@ class TripTest extends TestCase
     public function testItStoresEmptyTripWithUid()
     {
         // When
-        $response = $this->postJson(route('trips.store'), []);
+        $response = $this->postJson(route('trips.store'));
 
         // Then
         $response->assertStatus(201)
@@ -48,5 +48,29 @@ class TripTest extends TestCase
             ->assertJsonFragment([
                 'number' => $flight->number
             ]);
+    }
+
+    public function testItDestroysTripAndDetachesFlights()
+    {
+        // Given
+        $trip = factory(Trip::class)->create();
+        $flight = factory(Flight::class)->create();
+        $trip->addFlight($flight);
+
+        // When
+        $response = $this->deleteJson(route('trips.destroy', $trip));
+
+        // Then
+        $response->assertStatus(204);
+
+        $this->assertDatabaseMissing('trips', [
+            'id' => $trip->id
+        ]);
+        $this->assertDatabaseMissing('flight_trip', [
+            'trip_id' => $trip->id
+        ]);
+        $this->assertDatabaseHas('flights', [
+            'id' => $flight->id
+        ]);
     }
 }
