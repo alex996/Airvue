@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Flight;
 use Illuminate\Http\Request;
+use App\Http\Resources\FlightResource;
 
 class FlightController extends Controller
 {
@@ -46,7 +47,9 @@ class FlightController extends Controller
      */
     public function show(Flight $flight)
     {
-        //
+        $flight->load('origin', 'destination');
+
+        return new FlightResource($flight);
     }
 
     /**

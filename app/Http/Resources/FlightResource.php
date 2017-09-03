@@ -14,6 +14,13 @@ class FlightResource extends Resource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'origin' => new AirportResource($this->origin),
+            'destination' => new AirportResource($this->destination),
+            'departed_at' => $this->departed_at,
+            'arrived_at' => $this->arrived_at,
+            'hours' => (int) $this->hours,
+            'minutes' => (int) $this->minutes,
+        ];
     }
 }

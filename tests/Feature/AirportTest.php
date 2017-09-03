@@ -39,7 +39,7 @@ class AirportTest extends TestCase
         $this->assertGreaterThan($airports[$first]['name'], $airports[$second]['name']);
     }
 
-    public function testItReturnsSingleAirportById()
+    public function testItReturnsAirportById()
     {
     	// Given
     	$airport = factory(Airport::class)->create();
@@ -49,14 +49,16 @@ class AirportTest extends TestCase
 
     	// Then
     	$response->assertStatus(200)
-    		->assertJsonStructure([
-    			'data' => [
-    				'icao', 'iata', 'name', 'city', 'country', 'lat', 'long', 'elevation', 'timezone'
-    			]
-    		])
     		->assertJsonFragment([
     			'icao' => $airport->icao,
-    			'iata' => $airport->iata
-    		]);
+    			'iata' => $airport->iata,
+                'name' => $airport->name,
+                'city' => $airport->city,
+                'country' => $airport->country,
+                'lat' => $airport->lat,
+                'long' => $airport->long,
+                'elevation' => $airport->elevation,
+                'timezone' => $airport->timezone,
+            ]);
     }
 }

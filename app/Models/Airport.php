@@ -15,4 +15,14 @@ class Airport extends Model
 		'lat' => 'float',
 		'long' => 'float'
 	];
+
+	public function departures()
+	{
+		return $this->hasMany(Flight::class, 'origin_id');
+	}
+
+	public function arrivals()
+	{
+		return $this->hasMany(Flight::class, 'destination_id');
+	}
 }

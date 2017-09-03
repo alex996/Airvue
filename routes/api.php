@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Airports
 Route::apiResource('airports', 'AirportController')->only(['index', 'show']);
+
+// Flights
+Route::apiResource('flights', 'FlightController')->only(['index', 'show']);

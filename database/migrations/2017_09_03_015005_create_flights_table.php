@@ -17,6 +17,7 @@ class CreateFlightsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('origin_id')->index();
             $table->unsignedInteger('destination_id')->index();
+            $table->string('number')->unique();
             $table->timestamp('departed_at');
             $table->timestamp('arrived_at');
             $table->unsignedTinyInteger('hours');
