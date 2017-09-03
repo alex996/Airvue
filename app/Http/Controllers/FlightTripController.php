@@ -18,7 +18,7 @@ class FlightTripController extends Controller
     {
         $trip->load('flights');
 
-        return TripResource::collection($trip);
+        return new TripResource($trip);
     }
 
     /**

@@ -56,4 +56,31 @@ class FlightTripTest extends TestCase
     		'index' => 2
     	]);
     }
+
+    public function testItReturnsTripWithFlights()
+    {
+        // Given
+        $flight = factory(Flight::class)->create();
+        $trip = factory(Trip::class)->create();
+        $trip->addFlight($flight);
+
+        // When
+        $response = $this->getJson(route('trips.flights.index', compact('trip')));
+
+        // Then
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    'uid', 'flights' => [
+                        [
+                            'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+                        ]
+                    ]
+                ]
+            ])
+            ->assertJsonFragment([
+                'uid' => $trip->uid,
+                'number' => $flight->number
+            ]);
+    }
 }
