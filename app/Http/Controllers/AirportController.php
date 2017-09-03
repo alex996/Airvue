@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Airport;
 use Illuminate\Http\Request;
+use App\Http\Resources\AirportResource;
 
 class AirportController extends Controller
 {
@@ -12,9 +13,11 @@ class AirportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $airports = Airport::orderBy('name')->paginate(100);
+
+        return AirportResource::collection($airports);
     }
 
     /**
@@ -46,7 +49,7 @@ class AirportController extends Controller
      */
     public function show(Airport $airport)
     {
-        //
+        return new AirportResource($airport);
     }
 
     /**
