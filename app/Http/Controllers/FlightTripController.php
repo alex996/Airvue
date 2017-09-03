@@ -52,6 +52,8 @@ class FlightTripController extends Controller
     {
         $trip->deleteFlight($flight);
 
-        return Response::json([], 204);
+        $trip->load('flights');
+
+        return new TripResource($trip);
     }
 }

@@ -83,4 +83,37 @@ class FlightTripTest extends TestCase
                 'number' => $flight->number
             ]);
     }
+
+    public function testItDetachesFlightsFromTrip()
+    {
+        // Given
+        $trip = factory(Trip::class)->create();
+        $flights = factory(Flight::class, 2)->create();
+
+        $flights->each(function($flight) use ($trip) {
+            $trip->addFlight($flight);
+        });
+
+        // When
+        $response = $this->deleteJson(route('trips.flights.destroy', [
+            'trip' => $trip,
+            'flight' => $flights->first()
+        ]));
+
+        // Then
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    'uid', 'flights' => [
+                        [
+                            'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+                        ]
+                    ]
+                ]
+            ])
+            ->assertJsonFragment([
+                'uid' => $trip->uid,
+                'number' => $flights->last()->number
+            ]);
+    }
 }
