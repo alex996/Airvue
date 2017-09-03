@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Trip extends Model
 {
+    use Concerns\ManagesFlights;
+    
 	/**
 	 * The "booting" method of the model.
 	 *
@@ -48,24 +50,5 @@ class Trip extends Model
     public function getRouteKeyName()
     {
     	return 'uid';
-    }
-
-    public function flights()
-    {
-    	return $this->belongsToMany(Flight::class)
-    		->withPivot('index')
-    		->withTimestamps();
-    }
-
-    public function addFlight(Flight $flight)
-    {
-    	return $this->flights()->save($flight, [
-    		'index' => $this->flights()->count() + 1
-    	]);
-    }
-
-    public function hasFlight(Flight $flight)
-    {
-    	return $this->flights()->whereFlightId($flight->id)->exists();
     }
 }

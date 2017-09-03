@@ -41,4 +41,17 @@ class FlightTripController extends Controller
             ->response()
             ->setStatusCode(201);
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Trip  $trip
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Trip $trip, Flight $flight)
+    {
+        $trip->deleteFlight($flight);
+
+        return Response::json([], 204);
+    }
 }
