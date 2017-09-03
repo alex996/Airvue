@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,10 +11,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 // Airports
 Route::apiResource('airports', 'AirportController')->only(['index', 'show']);
 
@@ -27,4 +21,5 @@ Route::apiResource('flights', 'FlightController')->only(['index', 'show']);
 Route::apiResource('trips', 'TripController')->only(['store', 'show', 'destroy']);
 
 // Flight Trips
-Route::post('trips/{trip}/flights/{flight}', 'FlightTripController@store')->name('flight-trips.store');
+Route::post('trips/{trip}/flights/{flight}', 'FlightTripController@store')->name('trips.flights.store');
+Route::apiResource('trips/{trip}/flights', 'FlightTripController', ['as' => 'trips'])->only(['index', 'destroy']);

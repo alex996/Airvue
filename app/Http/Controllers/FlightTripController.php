@@ -10,6 +10,18 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 class FlightTripController extends Controller
 {
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Trip $trip)
+    {
+        $trip->load('flights');
+
+        return TripResource::collection($trip);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
