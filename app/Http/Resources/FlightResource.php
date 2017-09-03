@@ -15,6 +15,7 @@ class FlightResource extends Resource
     public function toArray($request)
     {
         return [
+            'number' => $this->number,
             'origin' => new AirportResource($this->origin),
             'destination' => new AirportResource($this->destination),
             'departed_at' => $this->departed_at,

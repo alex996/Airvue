@@ -50,12 +50,15 @@ class Trip extends Model
     		->withTimestamps();
     }
 
-    public function addFlight($flight)
+    public function addFlight(Flight $flight)
     {
-    	$add = is_a($flight, Flight::class) ? 'save' : 'attach';
-
-    	return $this->flights()->$add($flight, [
+    	return $this->flights()->save($flight, [
     		'index' => $this->flights()->count() + 1
     	]);
+    }
+
+    public function hasFlight(Flight $flight)
+    {
+    	return $this->flights()->whereFlightId($flight->id)->exists();
     }
 }

@@ -4,29 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use Illuminate\Http\Request;
+use App\Http\Resources\TripResource;
 
 class TripController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -35,7 +16,11 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $trip = Trip::create([]);
+
+        return (new TripResource($trip))
+            ->response()
+            ->setStatusCode(201);
     }
 
     /**
@@ -46,18 +31,9 @@ class TripController extends Controller
      */
     public function show(Trip $trip)
     {
-        //
-    }
+        $trip->load('flights');
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Trip  $trip
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Trip $trip)
-    {
-        //
+        return new TripResource($trip);
     }
 
     /**
