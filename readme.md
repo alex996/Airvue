@@ -73,7 +73,7 @@ DELETE /api/trips/59adcea256903
 
 ## Testing
 
-> Note: please make sure that the SQLite driver (php_pdo_sqlite.dll) is enabled.
+> Note: please make sure that the SQLite driver (`php_pdo_sqlite.dll`) is enabled.
 
 The project features integration and unit tests for the core functionalities:
 
