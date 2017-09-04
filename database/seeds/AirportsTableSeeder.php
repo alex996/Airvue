@@ -16,7 +16,7 @@ class AirportsTableSeeder extends Seeder
     {
     	Airport::truncate();
 
-    	$airportsRaw = json_decode(Storage::get('store/airports.json'), true);
+    	$airportsRaw = json_decode(Storage::get('aviation/airports.json'), true);
     	$airports = [];
     	$timestamp = Carbon::now()->toDateTimeString();
 

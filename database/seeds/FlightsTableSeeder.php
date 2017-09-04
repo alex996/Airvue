@@ -15,7 +15,7 @@ class FlightsTableSeeder extends Seeder
     {
         Flight::truncate();
 
-        $airlines = json_decode(Storage::get('store/airlines.json'), true);
+        $airlines = json_decode(Storage::get('aviation/airlines.json'), true);
         $cities = [
         	'Toronto', 'Montreal', 'Vancouver', 'Calgary', 'Ottawa',
         	'Edmonton', 'Quebec', 'Winnipeg', 'Hamilton', 'Kitchener'
