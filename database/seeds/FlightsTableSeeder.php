@@ -25,7 +25,6 @@ class FlightsTableSeeder extends Seeder
         $timestamp = Carbon::now()->toDateTimeString();
 
         for($i = 0; $i < 10; $i++) {
-
         	$flights = [];
 
         	for($j = 0; $j < 1000; $j++) {

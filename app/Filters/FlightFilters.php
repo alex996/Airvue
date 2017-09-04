@@ -2,19 +2,10 @@
 
 namespace App\Filters;
 
-use Illuminate\Http\Request;
-
-class FlightFilters
+class FlightFilters extends Filters
 {
-	protected $request;
-
-	public function __construct(Request $request)
+	public function filterByAirline(string $airline)
 	{
-		$this->request = $request;
-	}
-
-	public function applyTo($query)
-	{
-		return $query;
+		return $this->query->whereAirline($airline);
 	}
 }
