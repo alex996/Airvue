@@ -4,7 +4,7 @@ namespace App\Models\Concerns;
 
 use App\Models\Flight;
 
-trait ManagesFlights
+trait Flightable
 {
 	public function flights()
 	{

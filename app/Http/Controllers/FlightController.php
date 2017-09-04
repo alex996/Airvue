@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Flight;
 use Illuminate\Http\Request;
+use App\Filters\FlightFilters;
 use App\Http\Resources\FlightResource;
 
 class FlightController extends Controller
@@ -13,9 +14,10 @@ class FlightController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(FlightFilters $filters)
     {
-        $flights = Flight::with('origin', 'destination')->inRandomOrder()->paginate(100);
+        $flights = Flight::with('origin', 'destination')
+            ->apply($filters)->inRandomOrder()->paginate(100);
 
         return FlightResource::collection($flights);
     }

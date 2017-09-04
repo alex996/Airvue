@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Flight extends Model
 {
+    use Concerns\Filterable;
+    
 	/**
      * The attributes that should be mutated to dates.
      *
@@ -70,5 +72,5 @@ class Flight extends Model
     public function destination()
     {
     	return $this->belongsTo(Airport::class, 'destination_id');
-    }
+    }    
 }

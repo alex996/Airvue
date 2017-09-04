@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Trip extends Model
 {
-    use Concerns\ManagesFlights;
+    use Concerns\Flightable;
     
 	/**
 	 * The "booting" method of the model.
