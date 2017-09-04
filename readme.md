@@ -30,7 +30,7 @@ phpunit
 
 ### API Endpoints
 
-```
+``` bash
 +----------+-----------------------------------+-------------+-----------------------+---------+-------------------------+
 | Method   | URI                               | URI Param   | Name                  | Action  | Query String Params     |
 +----------+-----------------------------------+-------------|-----------------------+---------+-------------------------+
@@ -51,7 +51,7 @@ phpunit
 
 > Note: it's recommended to set `Content-Type` and `Accept` headers to `application/json`.
 
-```
+``` bash
 # List all airports in Paris, France in alphabetical order
 GET /api/airports?city=Paris&country=FR
 
