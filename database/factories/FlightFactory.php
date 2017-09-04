@@ -15,10 +15,10 @@ $factory->define(Flight::class, function (Faker $faker) {
 
     return [
         'origin_id' => function () {
-            factory(Airport::class)->create()->id;
+            return factory(Airport::class)->create()->id;
         },
         'destination_id' => function () {
-            factory(Airport::class)->create()->id;
+            return factory(Airport::class)->create()->id;
         },
         'airline' => ucfirst($faker->word),
         'departed_at' => $departedAt->toDateTimeString(),
