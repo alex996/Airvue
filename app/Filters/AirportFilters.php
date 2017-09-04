@@ -3,38 +3,25 @@
 namespace App\Filters;
 
 use Illuminate\Http\Request;
-//use App\Repositories\GeoRepository;
 
 class AirportFilters extends Filters
 {
-	/*public function __construct(Request $request, GeoRepository $geo)
-	{
-		parent::__construct($request);
+	protected $filterabe = [
+		'name', 'city', 'country'
+	];
 
-		$this->geo = $geo;
-	}*/
-
-	public function filterByName(string $name)
+	public function name(string $name)
 	{
 		return $this->query->where('name', 'like', "%$name");
 	}
 
-	public function filterByCity(string $city)
+	public function city(string $city)
 	{
 		return $this->query->where('city', 'like', "%$city");
 	}
 
-	public function filterByCountryCode(string $code)
+	public function country(string $country)
 	{		
-		return $this->query->whereCountry($code);
+		return $this->query->whereCountry($country);
 	}
-
-	/*public function filterByCountryName(string $name)
-	{
-		if ($code = $this->geo->getCountryName($name)) {
-			return $this->filterByCountryCode($code);
-		}	
-
-		return;
-	}*/
 }

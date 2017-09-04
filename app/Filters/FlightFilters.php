@@ -4,7 +4,11 @@ namespace App\Filters;
 
 class FlightFilters extends Filters
 {
-	public function filterByAirline(string $airline)
+	protected $filterabe = [
+		'origin', 'destination', 'airline'
+	];
+
+	public function airline(string $airline)
 	{
 		return $this->query->whereAirline($airline);
 	}

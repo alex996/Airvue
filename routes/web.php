@@ -10,3 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/', function(Illuminate\Http\Request $request) {
+	dd($request->only('filters', 'asdfasdfs'));
+});

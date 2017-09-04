@@ -10,6 +10,8 @@ abstract class Filters
 
 	protected $query;
 
+	protected $filterabe;
+
 	public function __construct(Request $request)
 	{
 		$this->request = $request;
@@ -19,8 +21,9 @@ abstract class Filters
 	{
 		$this->query = $query;
 
-		foreach($this->getQueryParams() as $key => $value) {
-			if ($method = $this->getFilterMethod($key)) {
+		foreach($this->getFilters() as $filter => $value)
+		{
+			if (method_exists($this, $method = camel_case($filter))) {
 				$this->$method($value);
 			}
 		}
@@ -28,19 +31,8 @@ abstract class Filters
 		return $query;
 	}
 
-	protected function getQueryParams()
+	protected function getFilters()
 	{
-		return $this->request->query->all();
-	}
-
-	protected function getFilterMethod(string $filter)
-	{
-		$method = 'filterBy'.ucfirst($filter);
-
-		if (! method_exists($this, $method)) {
-			return;
-		}
-
-		return $method;
+		return $this->request->only($this->filterabe);
 	}
 }

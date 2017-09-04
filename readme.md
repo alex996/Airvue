@@ -9,15 +9,21 @@
 git clone https://github.com/alex996/Airvue /path/to/airvue
 cd /path/to/airvue
 
-# 2. Create and configure the .env file
+# 2. Install Composer dependencies
+composer install
+
+# 3. Create and configure the .env file
 cp .env.example .env
 vim .env
 
-# 3. Migrate and seed the database
+# 4. Migrate and seed the database
 php artisan migrate --seed
 
-# 4. Serve on localhost:8000
+# 5. Serve on localhost:8000
 php artisan serve
+
+#6. (Optional) Run the test suite
+phpunit
 ```
 
 ## API Endpoints
