@@ -29,18 +29,18 @@ phpunit
 ## API Endpoints
 
 ```
-+----------+-----------------------------------+-----------------------+---------+
-| Method   | URI                               | Name                  | Action  |
-+----------+-----------------------------------+-----------------------+---------+
-| GET|HEAD | api/airports                      | airports.index        | Index	 |
-| GET|HEAD | api/airports/{airport}            | airports.show         | Show    |
-| GET|HEAD | api/flights                       | flights.index         | Index   |
-| GET|HEAD | api/flights/{flight}              | flights.show          | Show    |
-| POST     | api/trips                         | trips.store           | Store   |
-| GET|HEAD | api/trips/{trip}                  | trips.show            | Show    |
-| DELETE   | api/trips/{trip}                  | trips.destroy         | Destroy |
-| GET|HEAD | api/trips/{trip}/flights          | trips.flights.index   | Index   |
-| POST     | api/trips/{trip}/flights/{flight} | trips.flights.store   | Store   |
-| DELETE   | api/trips/{trip}/flights/{flight} | trips.flights.destroy | Destroy |
-+----------+-----------------------------------+-----------------------+---------+
++----------+-----------------------------------+-----------------------+---------+-------------------------+
+| Method   | URI                               | Name                  | Action  | Query String Params     |
++----------+-----------------------------------+-----------------------+---------+-------------------------+
+| GET|HEAD | api/airports                      | airports.index        | Index	 | name, city, country     |
+| GET|HEAD | api/airports/{airport}            | airports.show         | Show    | n/a				  	   |
+| GET|HEAD | api/flights                       | flights.index         | Index   | from, to, date, airline |
+| GET|HEAD | api/flights/{flight}              | flights.show          | Show    | n/a                     |
+| POST     | api/trips                         | trips.store           | Store   | n/a                     |
+| GET|HEAD | api/trips/{trip}                  | trips.show            | Show    | n/a                     |
+| DELETE   | api/trips/{trip}                  | trips.destroy         | Destroy | n/a                     |
+| GET|HEAD | api/trips/{trip}/flights          | trips.flights.index   | Index   | n/a                     |
+| POST     | api/trips/{trip}/flights/{flight} | trips.flights.store   | Store   | n/a                     |
+| DELETE   | api/trips/{trip}/flights/{flight} | trips.flights.destroy | Destroy | n/a                     |
++----------+-----------------------------------+-----------------------+---------+-------------------------+
 ```
