@@ -11,7 +11,4 @@
 |
 */
 
-
-Route::get('/', function(Illuminate\Http\Request $request) {
-	dd($request->only('filters', 'asdfasdfs'));
-});
+Route::view('/', 'welcome');

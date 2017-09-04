@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\{Flight, Trip};
-use App\Http\Resources\TripResource;
+use App\Http\Resources\FlightResource;
+use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class FlightTripController extends Controller
@@ -16,7 +17,7 @@ class FlightTripController extends Controller
      */
     public function index(Trip $trip)
     {
-        return new TripResource($trip);
+        return FlightResource::collection($trip->flights);
     }
 
     /**
@@ -33,7 +34,7 @@ class FlightTripController extends Controller
 
         $trip->addFlight($flight);
 
-        return (new TripResource($trip))
+        return (new FlightResource($flight))
             ->response()
             ->setStatusCode(201);
     }
@@ -48,6 +49,6 @@ class FlightTripController extends Controller
     {
         $trip->deleteFlight($flight);
 
-        return new TripResource($trip);
+        return Response::json([], 204);
     }
 }

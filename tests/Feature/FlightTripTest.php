@@ -23,7 +23,7 @@ class FlightTripTest extends TestCase
         $response->assertStatus(201)
         	->assertJsonStructure([
         		'data' => [
-        			'uid', 'flights'
+                    'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'     			
         		]
         	])
         	->assertJsonFragment([
@@ -57,7 +57,7 @@ class FlightTripTest extends TestCase
     	]);
     }
 
-    public function testItReturnsTripWithFlights()
+    public function testItReturnsFlightsForTrip()
     {
         // Given
         $flight = factory(Flight::class)->create();
@@ -71,15 +71,12 @@ class FlightTripTest extends TestCase
         $response->assertStatus(200)
             ->assertJsonStructure([
                 'data' => [
-                    'uid', 'flights' => [
-                        [
-                            'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
-                        ]
+                    [
+                        'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
                     ]
                 ]
             ])
             ->assertJsonFragment([
-                'uid' => $trip->uid,
                 'number' => $flight->number
             ]);
     }
@@ -88,32 +85,13 @@ class FlightTripTest extends TestCase
     {
         // Given
         $trip = factory(Trip::class)->create();
-        $flights = factory(Flight::class, 2)->create();
-
-        $flights->each(function($flight) use ($trip) {
-            $trip->addFlight($flight);
-        });
+        $flight = factory(Flight::class)->make();
+        $trip->addFlight($flight);
 
         // When
-        $response = $this->deleteJson(route('trips.flights.destroy', [
-            'trip' => $trip,
-            'flight' => $flights->first()
-        ]));
+        $response = $this->deleteJson(route('trips.flights.destroy', compact('trip', 'flight')));
 
         // Then
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    'uid', 'flights' => [
-                        [
-                            'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
-                        ]
-                    ]
-                ]
-            ])
-            ->assertJsonFragment([
-                'uid' => $trip->uid,
-                'number' => $flights->last()->number
-            ]);
+        $response->assertStatus(204);
     }
 }
