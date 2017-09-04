@@ -33,7 +33,7 @@ phpunit
 | Method   | URI                               | Name                  | Action  | Query String Params     |
 +----------+-----------------------------------+-----------------------+---------+-------------------------+
 | GET|HEAD | api/airports                      | airports.index        | Index	 | name, city, country     |
-| GET|HEAD | api/airports/{airport}            | airports.show         | Show    | n/a				  	   |
+| GET|HEAD | api/airports/{airport}            | airports.show         | Show    | n/a                     |
 | GET|HEAD | api/flights                       | flights.index         | Index   | from, to, date, airline |
 | GET|HEAD | api/flights/{flight}              | flights.show          | Show    | n/a                     |
 | POST     | api/trips                         | trips.store           | Store   | n/a                     |
