@@ -22,7 +22,7 @@ php artisan migrate --seed
 # 5. Serve on localhost:8000
 php artisan serve
 
-#6. (Optional) Run the test suite
+# 6. (Optional) Run the test suite
 phpunit
 ```
 
@@ -64,12 +64,12 @@ POST /api/trips
 # Add flight number 'U9FD21' to the trip with uid of '59adcea256903'
 POST /api/trips/59adcea256903/flights/U9FD21
 
-# List all flights for a trip with uid of '59adcea256903'
+# List all flights for the trip with uid of '59adcea256903'
 GET /api/trips/59adcea256903/flights
 
 # Remove flight number 'U9FD21' from the trip with uid of '59adcea256903'
 DELETE /api/trips/59adcea256903/flights/U9FD21
 
-# Remove trip with uid of '59adcea256903' and all of its flights
+# Remove the trip with uid of '59adcea256903' and all of its flights
 DELETE /api/trips/59adcea256903
 ```
