@@ -31,20 +31,20 @@ phpunit
 ### API Endpoints
 
 ``` bash
-+----------+-----------------------------------+-------------+-----------------------+---------+-------------------------+
-| Method   | URI                               | URI Param   | Name                  | Action  | Query String Params     |
-+----------+-----------------------------------+-------------|-----------------------+---------+-------------------------+
-| GET|HEAD | api/airports                      | n/a         | airports.index        | Index   | name, city, country     |
-| GET|HEAD | api/airports/{airport}            | icao        | airports.show         | Show    | n/a                     |
-| GET|HEAD | api/flights                       | n/a         | flights.index         | Index   | from, to, date, airline |
-| GET|HEAD | api/flights/{flight}              | number      | flights.show          | Show    | n/a                     |
-| POST     | api/trips                         | n/a         | trips.store           | Store   | n/a                     |
-| GET|HEAD | api/trips/{trip}                  | uid         | trips.show            | Show    | n/a                     |
-| DELETE   | api/trips/{trip}                  | uid         | trips.destroy         | Destroy | n/a                     |
-| GET|HEAD | api/trips/{trip}/flights          | uid         | trips.flights.index   | Index   | n/a                     |
-| POST     | api/trips/{trip}/flights/{flight} | uid, number | trips.flights.store   | Store   | n/a                     |
-| DELETE   | api/trips/{trip}/flights/{flight} | uid, number | trips.flights.destroy | Destroy | n/a                     |
-+----------+-----------------------------------+-------------|-----------------------+---------+-------------------------+
++----------+-----------------------------------+-----------------------+---------+-------------------------+
+| Method   | URI                               | Name                  | Action  | Query String Params     |
++----------+-----------------------------------+-----------------------+---------+-------------------------+
+| GET|HEAD | api/airports                      | airports.index        | Index   | name, city, country     |
+| GET|HEAD | api/airports/{airport}            | airports.show         | Show    | n/a                     |
+| GET|HEAD | api/flights                       | flights.index         | Index   | from, to, date, airline |
+| GET|HEAD | api/flights/{flight}              | flights.show          | Show    | n/a                     |
+| POST     | api/trips                         | trips.store           | Store   | n/a                     |
+| GET|HEAD | api/trips/{trip}                  | trips.show            | Show    | n/a                     |
+| DELETE   | api/trips/{trip}                  | trips.destroy         | Destroy | n/a                     |
+| GET|HEAD | api/trips/{trip}/flights          | trips.flights.index   | Index   | n/a                     |
+| POST     | api/trips/{trip}/flights/{flight} | trips.flights.store   | Store   | n/a                     |
+| DELETE   | api/trips/{trip}/flights/{flight} | trips.flights.destroy | Destroy | n/a                     |
++----------+-----------------------------------+-----------------------+---------+-------------------------+
 ```
 
 ### Example Requests
