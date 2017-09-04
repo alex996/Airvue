@@ -50,4 +50,30 @@ class FlightTest extends TestCase
                 'minutes' => $flight->minutes,
             ]);
     }
+
+    public function testItFiltersFlightsByAirline()
+    {
+        // Given
+        $flights = factory(Flight::class, 5)->create();
+        $flightsBA = factory(Flight::class, 5)->create([
+            'airline' => $britishAirways = 'British Airways'
+        ]);
+
+        $someFlightNonBA = $flights->random();
+        $someFlightBA = $flightsBA->random();
+
+        // When
+        $response = $this->getJson(route('flights.index', [
+            'airline' => $britishAirways
+        ]));
+        
+        // Then
+        $response->assertStatus(200)
+            ->assertJsonFragment(
+                $someFlightBA->only('number', 'airline')
+            )
+            ->assertJsonMissing(
+                $someFlightNonBA->only('number', 'airline')
+            );
+    }
 }

@@ -20,9 +20,7 @@ abstract class Filters
 		$this->query = $query;
 
 		foreach($this->getQueryParams() as $key => $value) {
-			$method = $this->getFilterMethod($key);
-
-			if ($method) {
+			if ($method = $this->getFilterMethod($key)) {
 				$this->$method($value);
 			}
 		}
