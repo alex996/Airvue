@@ -21,9 +21,6 @@ php artisan migrate --seed
 
 # 5. Serve on localhost:8000
 php artisan serve
-
-# 6. (Optional) Run the test suite
-phpunit
 ```
 
 ## Documentation
@@ -72,4 +69,15 @@ DELETE /api/trips/59adcea256903/flights/U9FD21
 
 # Remove the trip with uid of '59adcea256903' and all of its flights
 DELETE /api/trips/59adcea256903
+```
+
+## Testing
+
+> Note: please make sure that the SQLite driver (php_pdo_sqlite.dll) is enabled.
+
+The project features integration and unit tests for the core functionalities:
+
+``` bash
+# Run the test suite
+phpunit
 ```
