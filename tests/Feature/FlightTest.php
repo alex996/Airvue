@@ -26,7 +26,10 @@ class FlightTest extends TestCase
                         'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
                     ]
                 ]
-            ]);
+            ])
+            ->assertJsonFragment(
+                $flights->random()->only('number', 'hours', 'minutes')
+            );
     }
 
     public function testItReturnsFlightById()
@@ -44,11 +47,9 @@ class FlightTest extends TestCase
         			'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
         		]
         	])
-            ->assertJsonFragment([
-                'number' => $flight->number,
-                'hours' => $flight->hours,
-                'minutes' => $flight->minutes,
-            ]);
+            ->assertJsonFragment(
+                $flight->only('number', 'hours', 'minutes')
+            );
     }
 
     public function testItFiltersFlightsByAirline()
