@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Airport extends Model
 {
+	use Concerns\Filterable;
+	
 	/**
      * The attributes that should be cast to native types.
      *

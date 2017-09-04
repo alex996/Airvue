@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Airport;
 use Illuminate\Http\Request;
+use App\Filters\AirportFilters;
 use App\Http\Resources\AirportResource;
 
 class AirportController extends Controller
@@ -13,9 +14,9 @@ class AirportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(AirportFilters $filters)
     {
-        $airports = Airport::orderBy('name')->paginate(100);
+        $airports = Airport::orderBy('name')->apply($filters)->paginate(100);
 
         return AirportResource::collection($airports);
     }
