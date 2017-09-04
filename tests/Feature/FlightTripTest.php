@@ -73,7 +73,7 @@ class FlightTripTest extends TestCase
                 'data' => [
                     'uid', 'flights' => [
                         [
-                            'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+                            'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
                         ]
                     ]
                 ]
@@ -106,7 +106,7 @@ class FlightTripTest extends TestCase
                 'data' => [
                     'uid', 'flights' => [
                         [
-                            'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+                            'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
                         ]
                     ]
                 ]

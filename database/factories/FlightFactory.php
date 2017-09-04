@@ -19,6 +19,7 @@ $factory->define(Flight::class, function (Faker $faker) {
     return [
         'origin_id' => $origin_id ?: factory(Airport::class)->create()->id,
         'destination_id' => $destination_id ?: factory(Airport::class)->create()->id,
+        'airline' => ucfirst($faker->word),
         'departed_at' => $departedAt->toDateTimeString(),
         'arrived_at' => $departedAt->addHours($hours)->addMinutes($minutes)->toDateTimeString(),
         'hours' => $hours,

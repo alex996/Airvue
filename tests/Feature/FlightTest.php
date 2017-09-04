@@ -23,7 +23,7 @@ class FlightTest extends TestCase
             ->assertJsonStructure([
                 'data' => [
                     [
-                        'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+                        'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
                     ]
                 ]
             ]);
@@ -41,7 +41,7 @@ class FlightTest extends TestCase
         $response->assertStatus(200)
         	->assertJsonStructure([
         		'data' => [
-        			'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
+        			'number', 'origin', 'destination', 'airline', 'departed_at', 'arrived_at', 'hours', 'minutes'
         		]
         	])
             ->assertJsonFragment([
