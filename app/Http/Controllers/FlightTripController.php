@@ -16,8 +16,6 @@ class FlightTripController extends Controller
      */
     public function index(Trip $trip)
     {
-        $trip->load('flights');
-
         return new TripResource($trip);
     }
 
@@ -35,8 +33,6 @@ class FlightTripController extends Controller
 
         $trip->addFlight($flight);
 
-        $trip->load('flights');
-
         return (new TripResource($trip))
             ->response()
             ->setStatusCode(201);
@@ -51,8 +47,6 @@ class FlightTripController extends Controller
     public function destroy(Trip $trip, Flight $flight)
     {
         $trip->deleteFlight($flight);
-
-        $trip->load('flights');
 
         return new TripResource($trip);
     }

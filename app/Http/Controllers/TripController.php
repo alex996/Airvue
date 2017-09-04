@@ -32,8 +32,6 @@ class TripController extends Controller
      */
     public function show(Trip $trip)
     {
-        $trip->load('flights');
-
         return new TripResource($trip);
     }
 
