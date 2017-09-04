@@ -44,16 +44,18 @@ class AirportTest extends TestCase
 
     	// Then
     	$response->assertStatus(200)
-    		->assertJsonFragment([
-    			'icao' => $airport->icao,
-    			'iata' => $airport->iata,
-                'name' => $airport->name,
-                'city' => $airport->city,
-                'country' => $airport->country,
-                'lat' => $airport->lat,
-                'long' => $airport->long,
-                'elevation' => $airport->elevation,
-                'timezone' => $airport->timezone,
+    		->assertJson([
+                'data' => [
+                    'icao' => $airport->icao,
+                    'iata' => $airport->iata,
+                    'name' => $airport->name,
+                    'city' => $airport->city,
+                    'country' => $airport->country,
+                    'lat' => $airport->lat,
+                    'long' => $airport->long,
+                    'elevation' => $airport->elevation,
+                    'timezone' => $airport->timezone,
+                ]                
             ]);
     }
 }

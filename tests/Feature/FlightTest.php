@@ -43,6 +43,11 @@ class FlightTest extends TestCase
         		'data' => [
         			'number', 'origin', 'destination', 'departed_at', 'arrived_at', 'hours', 'minutes'
         		]
-        	]);
+        	])
+            ->assertJsonFragment([
+                'number' => $flight->number,
+                'hours' => $flight->hours,
+                'minutes' => $flight->minutes,
+            ]);
     }
 }
