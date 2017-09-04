@@ -47,6 +47,10 @@ class FlightTripController extends Controller
      */
     public function destroy(Trip $trip, Flight $flight)
     {
+        if (! $trip->hasFlight($flight)) {
+            throw new BadRequestHttpException("Flight #{$flight->number} has not been added to the trip.");
+        }
+
         $trip->deleteFlight($flight);
 
         return Response::json([], 204);
