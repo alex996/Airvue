@@ -1,7 +1,7 @@
 
 import './bootstrap';
 import Vue from 'vue';
-import Example from './components/Example';
+import Home from './components/Home';
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -21,6 +21,6 @@ const app = new Vue({
     el: '#app',
 
     components: {
-    	Example
+    	Home
     }
 });

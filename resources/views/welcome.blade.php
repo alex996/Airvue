@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div id="app">
-			<example></example>
+			<home></home>
 		</div>
 		
 		<!-- Scripts -->
