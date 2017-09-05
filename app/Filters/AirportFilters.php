@@ -12,12 +12,12 @@ class AirportFilters extends Filters
 
 	public function name(string $name)
 	{
-		return $this->query->where('name', 'like', "%$name");
+		return $this->query->where('name', 'like', "%$name%");
 	}
 
 	public function city(string $city)
 	{
-		return $this->query->where('city', 'like', "%$city");
+		return $this->query->where('city', 'like', "%$city%");
 	}
 
 	public function country(string $country)
