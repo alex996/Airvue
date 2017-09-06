@@ -36,7 +36,7 @@
     php artisan migrate --seed
     ```
 
-6). (Optional) Serve on localhost:8000:
+6) (*Optional*) Serve on localhost:8000:
 
     ```bash
     php artisan serve
@@ -67,9 +67,12 @@
 
 > **Note**: it's recommended to set `Content-Type` and `Accept` headers to `application/json`.
 
-``` bash
-# List all airports in Paris, France in alphabetical order
-GET /api/airports?city=Paris&country=FR
+
+* List all airports in Paris, France in alphabetical order
+
+    ``` bash
+    GET /api/airports?city=Paris&country=FR
+    ```
 
 # List Air Canada flights from Montreal to Toronto on Sep. 8 (Note, 'CA' is optional)
 GET /api/flights?from=Montreal,CA&to=Toronto,CA&airline=Air Canada&date=2017-09-08
