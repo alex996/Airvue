@@ -77,7 +77,7 @@
 * List Air Canada flights from Montreal to Toronto on Sep. 8 (Note, 'CA' is optional)
 
     ```bash
-    GET /api/flights?from=Montreal,CA&to=Toronto,CA&airline=Air Canada&date=2017-09-08
+    GET /api/flights?from=Montreal,%20CA&to=Toronto,%20CA&airline=Air%20Canada&date=2017-09-08
     ```
 
 * Make a new trip with no flights
@@ -120,3 +120,21 @@ The project features integration and unit tests for the core functionalities:
 # Run the test suite
 phpunit
 ```
+
+## Technical Notes
+
+### Database Seeding
+
+When you run `php artisan migrate --seed`, Laravel will run two seeder classes:
+
+* `AirportsTableSeeder` - reads data from `airports.json` and batch-inserts airport records in chunks of 1000;
+* `FlightsTableSeeder` - reads data from `airlines.json` and batch-inserts randomly-generated flight records in chunks of 1000.
+
+Given that there are 28k+ airport records, it'd be impractical to generate flights for every possible geo location. Instead, for demonstration purposes, `FlightsTableSeeder` generates random flights for the *10 biggest Canadian cities* with departure dates ranging between *now and one month from now* in the future.
+
+### JSON Data Store
+
+Two external sources were used as static data stores:
+
+* [mwgg/Airports](https://github.com/mwgg/Airports) - JSON database of the real-world airports;
+* [SkyTrax](http://www.worldairlineawards.com/awards/world_airline_rating.html) - the World's Top 100 Airlines in 2017 list.
