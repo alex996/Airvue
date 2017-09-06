@@ -4,22 +4,41 @@
 
 ## Installation
 
-``` bash
-# 1. Clone the repo
+1) Clone the repo:
+
+```bash
 git clone https://github.com/alex996/Airvue /path/to/airvue
 cd /path/to/airvue
+```
 
-# 2. Install Composer dependencies
+2) Install Composer dependencies:
+
+```bash
 composer install
+```
 
-# 3. Create and configure the .env file
+3) Create and configure the .env file:
+
+```bash
 cp .env.example .env
 vim .env
+```
 
-# 4. Migrate and seed the database
+4) Generate an application key:
+
+```bash
+php artisan key:generate
+```
+
+5) Migrate and seed the database:
+
+```bash
 php artisan migrate --seed
+```
 
-# 5. Serve on localhost:8000
+6). (Optional) Serve on localhost:8000:
+
+```bash
 php artisan serve
 ```
 

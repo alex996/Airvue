@@ -34,7 +34,7 @@
 				</div>
 			</form>
 
-			<hr>
+			<hr v-show="trip.flights.length">
 
 			<flight v-for="flight in trip.flights" :key="flight.number" :flight="flight" @deleted="deleteFlight"></flight>
 		</div>
