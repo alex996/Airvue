@@ -13282,7 +13282,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "field"
   }, [_c('label', {
     staticClass: "label"
-  }, [_vm._v("From (City, Country)")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("From")]), _vm._v(" "), _c('div', {
     staticClass: "control"
   }, [_c('input', {
     directives: [{
@@ -13310,7 +13310,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "field"
   }, [_c('label', {
     staticClass: "label"
-  }, [_vm._v("To (City, Country)")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("To")]), _vm._v(" "), _c('div', {
     staticClass: "control"
   }, [_c('input', {
     directives: [{
@@ -13764,7 +13764,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('h2', {
     staticClass: "subtitle"
-  }, [_c('em', [_vm._v("Plan your Dream Trip today")])])
+  }, [_c('em', [_vm._v("Plan your Dream Trip today.")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

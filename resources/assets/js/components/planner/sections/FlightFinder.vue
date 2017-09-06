@@ -12,7 +12,7 @@
 				<div class="columns">
 					<div class="column">
 						<div class="field">
-							<label class="label">From (City, Country)</label>
+							<label class="label">From</label>
 							<div class="control">
 								<input class="input" v-model="flight.from" placeholder="ex: Montreal, CA">
 							</div>
@@ -20,7 +20,7 @@
 					</div>
 					<div class="column">
 						<div class="field">
-							<label class="label">To (City, Country)</label>
+							<label class="label">To</label>
 							<div class="control">
 								<input class="input" v-model="flight.to" placeholder="ex: Toronto, CA">
 							</div>

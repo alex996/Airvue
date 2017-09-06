@@ -10,7 +10,7 @@
 						Airvue
 					</h1>
 					<h2 class="subtitle">
-						<em>Plan your Dream Trip today</em>
+						<em>Plan your Dream Trip today.</em>
 					</h2>
 					<button class="button is-primary is-inverted is-outlined is-large is-cta" @click="active = true">
 						Get Started Now
