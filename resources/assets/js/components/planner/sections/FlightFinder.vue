@@ -2,25 +2,17 @@
 	<section class="section">
 		<h1 class="title">
 			<span class="icon is-medium">
-				<i class="fa fa-map-marker" aria-hidden="true"></i>
+				<i class="fa fa-plane" aria-hidden="true"></i>
 			</span>
 
-			Find an Airport
+			Find a Flight
 		</h1>
 		<div class="box">
 			<form>
 				<div class="columns">
 					<div class="column">
 						<div class="field">
-							<label class="label">Name</label>
-							<div class="control">
-								<input class="input" placeholder="YYYY-MM-DD">
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="field">
-							<label class="label">City</label>
+							<label class="label">From (City, Country)</label>
 							<div class="control">
 								<input class="input" placeholder="ex: Montreal, CA">
 							</div>
@@ -28,13 +20,29 @@
 					</div>
 					<div class="column">
 						<div class="field">
-							<label class="label">Country</label>
+							<label class="label">To (City, Country)</label>
 							<div class="control">
 								<input class="input" placeholder="ex: Toronto, CA">
 							</div>
 						</div>
 					</div>
 					<div class="column">
+						<div class="field">
+							<label class="label">Airline</label>
+							<div class="control">
+								<input class="input" placeholder="ex: Air Canada">
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="field">
+							<label class="label">Date</label>
+							<div class="control">
+								<input class="input" placeholder="YYYY-MM-DD">
+							</div>
+						</div>
+					</div>
+					<div class="column is-1 is-flex">
 						<div class="field">
 							<button class="button is-large is-primary">
 								<span class="icon is-large">
@@ -51,7 +59,7 @@
 
 <script>
 	export default {
-		
+
 	}
 </script>
 

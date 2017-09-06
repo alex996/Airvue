@@ -13,7 +13,7 @@ class AirportTest extends TestCase
     public function testItPaginatesAirportsAlphabetically()
     {
         // Given
-    	$airports = factory(Airport::class, 100)->create();
+    	$airports = factory(Airport::class, 15)->create();
 
         // When
     	$response = $this->getJson(route('airports.index'));

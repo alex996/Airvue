@@ -9,9 +9,9 @@
 </template>
 
 <script>
-	import AirportFinder from './modules/AirportFinder';
-	import FlightFinder from './modules/FlightFinder';
-	import FlightManager from './modules/FlightManager';
+	import AirportFinder from './sections/AirportFinder';
+	import FlightFinder from './sections/FlightFinder';
+	import FlightManager from './sections/FlightManager';
 
 	export default {
 		components: {
@@ -49,5 +49,8 @@
 </script>
 
 <style lang="scss">
-	
+	.is-flex.is-centered {
+		justify-content: center;
+		align-items: center;
+	}
 </style>

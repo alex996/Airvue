@@ -16,7 +16,7 @@ class AirportController extends Controller
      */
     public function index(AirportFilters $filters)
     {
-        $airports = Airport::orderBy('name')->apply($filters)->paginate(100);
+        $airports = Airport::orderBy('name')->apply($filters)->paginate(15);
 
         return AirportResource::collection($airports);
     }
