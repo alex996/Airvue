@@ -4,7 +4,7 @@
 
 		<flight-finder></flight-finder>
 
-		<flight-manager :flights="flights"></flight-manager>
+		<flight-manager :flights="trip.flights"></flight-manager>
 	</div>
 </template>
 
@@ -19,7 +19,10 @@
 		},
 		data() {
 			return {
-				trip: null	
+				trip: {
+					uid: null,
+					flights: []
+				}	
 			};
 		},
 		created() {
@@ -34,15 +37,6 @@
 					.catch((error) => {
 						console.log(error.response.data);
 					});
-			}
-		},
-		computed: {
-			flights() {
-				if (! this.trip) {
-					return [];
-				}
-
-				return this.trip.flights;
 			}
 		}
 	}

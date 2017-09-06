@@ -13,7 +13,7 @@ class FlightTest extends TestCase
     public function testItPaginatesFlights()
     {
         // Given
-        $flights = factory(Flight::class, 100)->create();
+        $flights = factory(Flight::class, 15)->create();
 
         // When
         $response = $this->getJson(route('flights.index'));

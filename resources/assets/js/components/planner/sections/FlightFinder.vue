@@ -14,7 +14,7 @@
 						<div class="field">
 							<label class="label">From (City, Country)</label>
 							<div class="control">
-								<input class="input" placeholder="ex: Montreal, CA">
+								<input class="input" v-model="flight.from" placeholder="ex: Montreal, CA">
 							</div>
 						</div>
 					</div>
@@ -22,7 +22,7 @@
 						<div class="field">
 							<label class="label">To (City, Country)</label>
 							<div class="control">
-								<input class="input" placeholder="ex: Toronto, CA">
+								<input class="input" v-model="flight.to" placeholder="ex: Toronto, CA">
 							</div>
 						</div>
 					</div>
@@ -30,7 +30,7 @@
 						<div class="field">
 							<label class="label">Airline</label>
 							<div class="control">
-								<input class="input" placeholder="ex: Air Canada">
+								<input class="input" v-model="flight.airline" placeholder="ex: Air Canada">
 							</div>
 						</div>
 					</div>
@@ -38,13 +38,13 @@
 						<div class="field">
 							<label class="label">Date</label>
 							<div class="control">
-								<input class="input" placeholder="YYYY-MM-DD">
+								<input class="input" v-model="flight.date" placeholder="YYYY-MM-DD">
 							</div>
 						</div>
 					</div>
-					<div class="column is-1 is-flex">
+					<div class="column is-1 is-flex is-centered">
 						<div class="field">
-							<button class="button is-large is-primary">
+							<button class="button is-large is-primary" @click.prevent="findFlights()">
 								<span class="icon is-large">
 									<i class="fa fa-search" aria-hidden="true"></i>
 								</span>
@@ -54,12 +54,69 @@
 				</div>
 			</form>
 		</div>
+
+		<flights :flights="flights" :active="showFlights" @closed="showFlights = false" @load="findFlights"></flights>
 	</section>
 </template>
 
 <script>
-	export default {
+	import Flights from './modules/Flights';
 
+	export default {
+		components: {
+			Flights
+		},
+		data() {
+			return {
+				flight: {
+					from: '',
+					to: '',
+					airline: '',
+					date: ''
+				},
+				flights: {
+					data: [],
+					links: [],
+					meta: []
+				},
+				showFlights: false
+			}
+		},
+		methods: {			
+			findFlights(url) {
+				if (! url)
+					url = '/api/flights';
+
+				url = this.parameterize(url)
+
+				axios.get(url)
+					.then((response) => {
+						this.flights = response.data;
+
+						this.showFlights = true;
+					});
+			},
+			parameterize(url) {
+				if (! url.includes('?'))
+					url += '?';
+				else
+					url += '&';
+
+				if (this.flight.from)
+					url += `from=${this.flight.from}&`;
+
+				if (this.flight.to)
+					url += `to=${this.flight.to}&`;
+
+				if (this.flight.airline)
+					url += `airline=${this.flight.airline}&`;
+
+				if (this.flight.date)
+					url += `date=${this.flight.date}&`;
+
+				return url;
+			}
+		}
 	}
 </script>
 

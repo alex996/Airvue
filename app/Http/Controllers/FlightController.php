@@ -17,7 +17,7 @@ class FlightController extends Controller
     public function index(FlightFilters $filters)
     {
         $flights = Flight::with('origin', 'destination')
-            ->apply($filters)->inRandomOrder()->paginate(100);
+            ->apply($filters)->orderBy('number')->paginate(15);
 
         return FlightResource::collection($flights);
     }

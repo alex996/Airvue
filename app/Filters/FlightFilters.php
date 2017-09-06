@@ -33,10 +33,10 @@ class FlightFilters extends Filters
 		list($city, $country) = array_pad(explode(',', $cityAndCountry), 2, null);
 
 		return $this->query->whereHas($relation, function($query) use ($city, $country) {
-			$query->where('city', 'like', "%$city%");
+			$query->where('city', 'like', '%'.trim($city).'%');
 
 			if ($country) {
-				$query->whereCountry($country);
+				$query->whereCountry(trim($country));
 			}
 		});
 	}

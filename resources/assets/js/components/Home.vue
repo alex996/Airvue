@@ -5,7 +5,7 @@
 				<template v-if="active">
 					<app></app>
 				</template>
-				<template v-else>
+				<div class="has-text-centered" v-else>
 					<h1 class="title is-1 is-spaced">
 						Airvue
 					</h1>
@@ -15,7 +15,7 @@
 					<button class="button is-primary is-inverted is-outlined is-large is-cta" @click="active = true">
 						Get Started Now
 					</button>
-				</template>
+				</div>
 			</div>
 		</div>
 	</section>
