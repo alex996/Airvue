@@ -4,7 +4,7 @@
 
 		<flight-finder></flight-finder>
 
-		<flight-manager :flights="trip.flights"></flight-manager>
+		<flight-manager></flight-manager>
 	</div>
 </template>
 
@@ -16,28 +16,6 @@
 	export default {
 		components: {
 			AirportFinder, FlightFinder, FlightManager
-		},
-		data() {
-			return {
-				trip: {
-					uid: null,
-					flights: []
-				}	
-			};
-		},
-		created() {
-			this.makeTrip();
-		},
-		methods: {
-			makeTrip() {
-				axios.post('/api/trips')
-					.then((response) => {
-						this.trip = response.data.data;
-					})
-					.catch((error) => {
-						console.log(error.response.data);
-					});
-			}
 		}
 	}
 </script>

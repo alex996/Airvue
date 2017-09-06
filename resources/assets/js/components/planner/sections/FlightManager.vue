@@ -8,26 +8,100 @@
 			Manage Flights
 		</h1>
 		<div class="box">
-			<p v-show="! flights.length" class="has-text-centered">
-				<i>You do not have any planned flights.</i>
-			</p>
+			<form @submit.prevent="addFlight">
+				<div class="notification is-danger" v-show="error">
+					<button class="delete" @click.prevent="error = ''"></button>
+					<strong>Snap!</strong> {{ error }}
+				</div>
+				<div class="columns">
+					<div class="column">
+						<div class="field">
+							<label class="label">Flight Number</label>
+							<div class="control">
+								<input class="input" v-model="number" placeholder="ex: 02AWSV (Hint: use the 'Find a Flight' tool above)" required>
+							</div>
+						</div>
+					</div>
+					<div class="column is-1 is-flex is-centered">
+						<div class="field">
+							<button class="button is-large is-primary">
+								<span class="icon is-large">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</span>
+							</button>
+						</div>
+					</div>			
+				</div>
+			</form>
 
-			<flight v-for="flight in flights" :key="flight.number">
-			</flight>
+			<hr>
+
+			<flight v-for="flight in trip.flights" :key="flight.number" :flight="flight" @deleted="deleteFlight"></flight>
 		</div>
 	</section>
 </template>
 
 <script>
-	import Flight from './entities/Flight'
+ 	import Flight from './modules/Flight';
 
 	export default {
 		components: {
 			Flight
 		},
-		props: [
-			'flights'
-		]
+		data() {
+			return {
+				trip: {
+					uid: null,
+					flights: []
+				},
+				number: '',
+				error: '',
+			};
+		},
+		created() {
+			this.makeTrip();
+		},
+		methods: {
+			makeTrip() {
+				axios.post('/api/trips')
+					.then((response) => {
+						this.trip = response.data.data;
+					})
+					.catch((error) => {
+						console.log(error.response.data);
+					});
+			},
+			addFlight() {
+				this.error = '';
+
+				axios.post('/api/trips/' + this.trip.uid + '/flights/' + this.number)
+					.then((response) => {
+						this.trip.flights.push(response.data.data);
+					})
+					.catch((error) => {
+						if (error.response.status === 404) {
+							this.error = `We could not find any flight matching '${this.number}'. Sorry about that!`;
+						} 
+						else if (error.response.status === 400) {
+							this.error = `Flight '${this.number}' has already been added to the trip!`;
+						}
+						else {
+							this.error = 'Something terrible just happened. Please refresh the page and try again.';
+						}
+					})
+					.then(() => {
+						this.number = '';
+					});
+			},
+			deleteFlight(flight) {
+				axios.delete('/api/trips/' + this.trip.uid + '/flights/' + flight.number)
+					.then((response) => {
+						this.trip.flights = this.trip.flights.filter(someFlight =>
+							someFlight.number !== flight.number
+						);
+					});
+			}
+		}
 	}
 </script>
 
