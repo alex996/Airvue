@@ -121,16 +121,16 @@ The project features integration and unit tests for the core functionalities:
 phpunit
 ```
 
-## Technical Notes
+## Notes
 
 ### Database Seeding
 
 When you run `php artisan migrate --seed`, Laravel will run two seeder classes:
 
 * `AirportsTableSeeder` - reads data from `airports.json` and batch-inserts airport records in chunks of 1000;
-* `FlightsTableSeeder` - reads data from `airlines.json` and batch-inserts randomly-generated flight records in chunks of 1000.
+* `FlightsTableSeeder` - reads data from `airlines.json` and batch-inserts flight records in chunks of 1000.
 
-Given that there are 28k+ airport records, it'd be impractical to generate flights for every possible geo location. Instead, for demonstration purposes, `FlightsTableSeeder` generates random flights for the *10 biggest Canadian cities* with departure dates ranging between *now and one month from now* in the future.
+Given that there are 28k+ airport records, it'd be impractical to generate flights for every possible geo location. Instead, for demonstration purposes, `FlightsTableSeeder` generates random flights for the *10 biggest Canadian cities* with departure dates ranging between *now* and *one month from now* in the future.
 
 ### JSON Data Store
 
