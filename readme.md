@@ -74,24 +74,41 @@
     GET /api/airports?city=Paris&country=FR
     ```
 
-# List Air Canada flights from Montreal to Toronto on Sep. 8 (Note, 'CA' is optional)
-GET /api/flights?from=Montreal,CA&to=Toronto,CA&airline=Air Canada&date=2017-09-08
+* List Air Canada flights from Montreal to Toronto on Sep. 8 (Note, 'CA' is optional)
 
-# Make a new trip with no flights
-POST /api/trips
+    ```bash
+    GET /api/flights?from=Montreal,CA&to=Toronto,CA&airline=Air Canada&date=2017-09-08
+    ```
 
-# Add flight number 'U9FD21' to the trip with uid of '59adcea256903'
-POST /api/trips/59adcea256903/flights/U9FD21
+* Make a new trip with no flights
 
-# List all flights for the trip with uid of '59adcea256903'
-GET /api/trips/59adcea256903/flights
+    ```bash
+    POST /api/trips
+    ```
 
-# Remove flight number 'U9FD21' from the trip with uid of '59adcea256903'
-DELETE /api/trips/59adcea256903/flights/U9FD21
+* Add flight number 'U9FD21' to the trip with uid of '59adcea256903'
 
-# Remove the trip with uid of '59adcea256903' and all of its flights
-DELETE /api/trips/59adcea256903
-```
+    ```bash
+    POST /api/trips/59adcea256903/flights/U9FD21
+    ```
+
+* List all flights for the trip with uid of '59adcea256903'
+
+    ```bash
+    GET /api/trips/59adcea256903/flights
+    ```
+
+* Remove flight number 'U9FD21' from the trip with uid of '59adcea256903'
+
+    ```bash
+    DELETE /api/trips/59adcea256903/flights/U9FD21
+    ```
+
+* Remove the trip with uid of '59adcea256903' and all of its flights
+
+    ```bash
+    DELETE /api/trips/59adcea256903
+    ```
 
 ## Testing
 
