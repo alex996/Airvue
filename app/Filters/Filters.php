@@ -40,7 +40,7 @@ abstract class Filters
 	/**
 	 * Apply filters to a query builder instance.
 	 * 
-	 * @param  mixed $query
+	 * @param  \Illuminate\Database\Eloquent\Builder $query
 	 * @return \Illuminate\Database\Eloquent\Builder
 	 */
 	public function applyTo($query)
