@@ -18,8 +18,9 @@
 						<div class="field">
 							<label class="label">Flight Number</label>
 							<div class="control">
-								<input class="input" v-model="number" placeholder="ex: 02AWSV (Hint: use the 'Find a Flight' tool above)" required>
+								<input class="input" v-model="number" placeholder="ex: 02AWSV" required>
 							</div>
+							<p class="help"><i>Hint</i>: use the 'Find a Flight' tool above and copy-paste the flight number to the input box.</p>
 						</div>
 					</div>
 					<div class="column is-1 is-flex is-centered">

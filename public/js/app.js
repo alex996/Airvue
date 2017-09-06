@@ -1146,7 +1146,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(76);
+module.exports = __webpack_require__(71);
 
 
 /***/ }),
@@ -12420,7 +12420,7 @@ var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(39),
   /* template */
-  __webpack_require__(75),
+  __webpack_require__(70),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -12582,7 +12582,7 @@ var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(43),
   /* template */
-  __webpack_require__(74),
+  __webpack_require__(69),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -12663,7 +12663,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sections_AirportFinder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__sections_AirportFinder__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sections_FlightFinder__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sections_FlightFinder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__sections_FlightFinder__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sections_FlightManager__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sections_FlightManager__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sections_FlightManager___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__sections_FlightManager__);
 //
 //
@@ -12776,7 +12776,7 @@ exports.push([module.i, "", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Airports__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Airports__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Airports___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__modules_Airports__);
 //
 //
@@ -12883,261 +12883,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(49)
-}
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(51),
-  /* template */
-  __webpack_require__(52),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-ca772618",
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "C:\\laragon\\www\\airvue\\resources\\assets\\js\\components\\planner\\sections\\modules\\Airports.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Airports.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-ca772618", Component.options)
-  } else {
-    hotAPI.reload("data-v-ca772618", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(50);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("25f799e2", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca772618\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Airports.vue", function() {
-     var newContent = require("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca772618\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Airports.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.modal-card[data-v-ca772618] {\n  min-width: 1000px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['active', 'airports'],
-	methods: {
-		goBack: function goBack() {
-			this.$emit('load', this.airports.links.prev);
-		},
-		goForward: function goForward() {
-			this.$emit('load', this.airports.links.next);
-		}
-	}
-});
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    class: {
-      'modal': true, 'is-active': _vm.active
-    }
-  }, [_c('div', {
-    staticClass: "modal-background",
-    on: {
-      "click": function($event) {
-        _vm.$emit('closed')
-      }
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "modal-card"
-  }, [_c('header', {
-    staticClass: "modal-card-head"
-  }, [_c('p', {
-    staticClass: "modal-card-title"
-  }, [_vm._v("\n\t\t\t\tAirports\n\t\t\t")]), _vm._v(" "), _c('button', {
-    staticClass: "delete",
-    attrs: {
-      "aria-label": "close"
-    },
-    on: {
-      "click": function($event) {
-        _vm.$emit('closed')
-      }
-    }
-  })]), _vm._v(" "), _c('section', {
-    staticClass: "modal-card-body is-flex is-centered"
-  }, [_c('table', {
-    staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_vm._l((_vm.airports.data), function(airport) {
-    return _c('tr', {
-      key: airport.icao
-    }, [_c('td', [_c('span', {
-      staticClass: "tag is-primary"
-    }, [_vm._v(_vm._s(airport.icao))])]), _vm._v(" "), _c('td', [_c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (airport.iata),
-        expression: "airport.iata"
-      }],
-      staticClass: "tag is-light"
-    }, [_vm._v(_vm._s(airport.iata))])]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.city))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.country))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.lat))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.long))])])
-  }), _vm._v(" "), (!_vm.airports.data.length) ? _c('tr', [_vm._m(1)]) : _vm._e()], 2)])]), _vm._v(" "), _c('footer', {
-    staticClass: "modal-card-foot is-flex is-centered"
-  }, [_c('div', {
-    staticClass: "field is-grouped is-grouped-centered"
-  }, [_c('div', {
-    staticClass: "control"
-  }, [_c('button', {
-    staticClass: "button is-primary",
-    attrs: {
-      "disabled": !_vm.airports.links.prev
-    },
-    on: {
-      "click": _vm.goBack
-    }
-  }, [_vm._v("Previous")])]), _vm._v(" "), _c('div', {
-    staticClass: "control"
-  }, [_c('button', {
-    staticClass: "button is-primary",
-    attrs: {
-      "disabled": !_vm.airports.links.next
-    },
-    on: {
-      "click": _vm.goForward
-    }
-  }, [_vm._v("Next")])])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('thead', [_c('tr', [_c('th', [_vm._v("ICAO")]), _vm._v(" "), _c('th', [_vm._v("IATA")]), _vm._v(" "), _c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("City")]), _vm._v(" "), _c('th', [_vm._v("Country")]), _vm._v(" "), _c('th', [_vm._v("Latitude")]), _vm._v(" "), _c('th', [_vm._v("Longitude")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('td', {
-    staticClass: "has-text-centered",
-    attrs: {
-      "colspan": "7"
-    }
-  }, [_c('i', [_vm._v("Sorry, we couldn't find any airports for this search.")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-ca772618", module.exports)
-  }
-}
-
-/***/ }),
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13298,7 +13048,7 @@ var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(57),
   /* template */
-  __webpack_require__(63),
+  __webpack_require__(58),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -13375,7 +13125,7 @@ exports.push([module.i, "", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Flights__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Flights__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Flights___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__modules_Flights__);
 //
 //
@@ -13494,265 +13244,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(59)
-}
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(61),
-  /* template */
-  __webpack_require__(62),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-d2917172",
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "C:\\laragon\\www\\airvue\\resources\\assets\\js\\components\\planner\\sections\\modules\\Flights.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Flights.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d2917172", Component.options)
-  } else {
-    hotAPI.reload("data-v-d2917172", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(60);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("1548522c", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d2917172\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flights.vue", function() {
-     var newContent = require("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d2917172\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flights.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.modal-card[data-v-d2917172] {\n  min-width: 1000px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 61 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['active', 'flights'],
-	methods: {
-		goBack: function goBack() {
-			this.$emit('load', this.flights.links.prev);
-		},
-		goForward: function goForward() {
-			this.$emit('load', this.flights.links.next);
-		}
-	}
-});
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    class: {
-      'modal': true, 'is-active': _vm.active
-    }
-  }, [_c('div', {
-    staticClass: "modal-background",
-    on: {
-      "click": function($event) {
-        _vm.$emit('closed')
-      }
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "modal-card"
-  }, [_c('header', {
-    staticClass: "modal-card-head"
-  }, [_c('p', {
-    staticClass: "modal-card-title"
-  }, [_vm._v("\n\t\t\t\tFlights\n\t\t\t")]), _vm._v(" "), _c('button', {
-    staticClass: "delete",
-    attrs: {
-      "aria-label": "close"
-    },
-    on: {
-      "click": function($event) {
-        _vm.$emit('closed')
-      }
-    }
-  })]), _vm._v(" "), _c('section', {
-    staticClass: "modal-card-body is-flex is-centered"
-  }, [_c('table', {
-    staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_vm._l((_vm.flights.data), function(flight) {
-    return _c('tr', {
-      key: flight.number
-    }, [_c('td', [_c('span', {
-      staticClass: "tag is-primary"
-    }, [_vm._v(_vm._s(flight.number))])]), _vm._v(" "), _c('td', [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(flight.origin.city) + ", " + _vm._s(flight.origin.country) + "\n\t\t\t\t\t\t\t"), _c('span', {
-      staticClass: "tag is-light",
-      attrs: {
-        "title": flight.origin.name
-      }
-    }, [_vm._v(_vm._s(flight.origin.icao))])]), _vm._v(" "), _c('td', [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(flight.destination.city) + ", " + _vm._s(flight.destination.country) + "\n\t\t\t\t\t\t\t"), _c('span', {
-      staticClass: "tag is-light",
-      attrs: {
-        "title": flight.destination.name
-      }
-    }, [_vm._v(_vm._s(flight.destination.icao))])]), _vm._v(" "), _c('td', [_vm._v(_vm._s(flight.airline))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(flight.departed_at.date.substring(0, 16)))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(flight.hours) + "h " + _vm._s(flight.minutes) + "m")])])
-  }), _vm._v(" "), (!_vm.flights.data.length) ? _c('tr', [_vm._m(1)]) : _vm._e()], 2)])]), _vm._v(" "), _c('footer', {
-    staticClass: "modal-card-foot is-flex is-centered"
-  }, [_c('div', {
-    staticClass: "field is-grouped is-grouped-centered"
-  }, [_c('div', {
-    staticClass: "control"
-  }, [_c('button', {
-    staticClass: "button is-primary",
-    attrs: {
-      "disabled": !_vm.flights.links.prev
-    },
-    on: {
-      "click": _vm.goBack
-    }
-  }, [_vm._v("Previous")])]), _vm._v(" "), _c('div', {
-    staticClass: "control"
-  }, [_c('button', {
-    staticClass: "button is-primary",
-    attrs: {
-      "disabled": !_vm.flights.links.next
-    },
-    on: {
-      "click": _vm.goForward
-    }
-  }, [_vm._v("Next")])])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('thead', [_c('tr', [_c('th', [_vm._v("Number")]), _vm._v(" "), _c('th', [_vm._v("From")]), _vm._v(" "), _c('th', [_vm._v("To")]), _vm._v(" "), _c('th', [_vm._v("Airline")]), _vm._v(" "), _c('th', [_vm._v("Date")]), _vm._v(" "), _c('th', [_vm._v("Duration")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('td', {
-    staticClass: "has-text-centered",
-    attrs: {
-      "colspan": "6"
-    }
-  }, [_c('i', [_vm._v("Sorry, we couldn't find any flights for this search.")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-d2917172", module.exports)
-  }
-}
-
-/***/ }),
-/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -13928,19 +13419,19 @@ if (false) {
 }
 
 /***/ }),
-/* 64 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(65)
+  __webpack_require__(60)
 }
 var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(67),
+  __webpack_require__(62),
   /* template */
-  __webpack_require__(73),
+  __webpack_require__(68),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -13972,13 +13463,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 65 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(66);
+var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -13998,7 +13489,7 @@ if(false) {
 }
 
 /***/ }),
-/* 66 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -14012,13 +13503,14 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 67 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Flight__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Flight__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Flight___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__modules_Flight__);
+//
 //
 //
 //
@@ -14125,19 +13617,726 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
 /* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "section"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "box"
+  }, [_c('form', {
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.addFlight($event)
+      }
+    }
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.error),
+      expression: "error"
+    }],
+    staticClass: "notification is-danger"
+  }, [_c('button', {
+    staticClass: "delete",
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.error = ''
+      }
+    }
+  }), _vm._v(" "), _c('strong', [_vm._v("Snap!")]), _vm._v(" " + _vm._s(_vm.error) + "\n\t\t\t")]), _vm._v(" "), _c('div', {
+    staticClass: "columns"
+  }, [_c('div', {
+    staticClass: "column"
+  }, [_c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("Flight Number")]), _vm._v(" "), _c('div', {
+    staticClass: "control"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.number),
+      expression: "number"
+    }],
+    staticClass: "input",
+    attrs: {
+      "placeholder": "ex: 02AWSV",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.number)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.number = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _vm._m(1)])]), _vm._v(" "), _vm._m(2)])]), _vm._v(" "), _c('hr', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.trip.flights.length),
+      expression: "trip.flights.length"
+    }]
+  }), _vm._v(" "), _vm._l((_vm.trip.flights), function(flight) {
+    return _c('flight', {
+      key: flight.number,
+      attrs: {
+        "flight": flight
+      },
+      on: {
+        "deleted": _vm.deleteFlight
+      }
+    })
+  })], 2)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h1', {
+    staticClass: "title"
+  }, [_c('span', {
+    staticClass: "icon is-medium"
+  }, [_c('i', {
+    staticClass: "fa fa-globe",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v("\n\n\t\tManage Flights\n\t")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
+    staticClass: "help"
+  }, [_c('i', [_vm._v("Hint")]), _vm._v(": use the 'Find a Flight' tool above and copy-paste the flight number to the input box.")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "column is-1 is-flex is-centered"
+  }, [_c('div', {
+    staticClass: "field"
+  }, [_c('button', {
+    staticClass: "button is-large is-primary"
+  }, [_c('span', {
+    staticClass: "icon is-large"
+  }, [_c('i', {
+    staticClass: "fa fa-plus",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-21499e2e", module.exports)
+  }
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('airport-finder'), _vm._v(" "), _c('flight-finder'), _vm._v(" "), _c('flight-manager')], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6de6a0c4", module.exports)
+  }
+}
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "hero is-fullheight is-primary is-bold"
+  }, [_c('div', {
+    staticClass: "hero-body"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [(_vm.active) ? [_c('app')] : _c('div', {
+    staticClass: "has-text-centered"
+  }, [_c('h1', {
+    staticClass: "title is-1 is-spaced"
+  }, [_vm._v("\n\t\t\t\t\tAirvue\n\t\t\t\t")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('button', {
+    staticClass: "button is-primary is-inverted is-outlined is-large is-cta",
+    on: {
+      "click": function($event) {
+        _vm.active = true
+      }
+    }
+  }, [_vm._v("\n\t\t\t\t\tGet Started Now\n\t\t\t\t")])])], 2)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h2', {
+    staticClass: "subtitle"
+  }, [_c('em', [_vm._v("Plan your Dream Trip today.")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-443d712f", module.exports)
+  }
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(69)
+  __webpack_require__(85)
 }
 var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(71),
+  __webpack_require__(83),
   /* template */
-  __webpack_require__(72),
+  __webpack_require__(87),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-ca772618",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\laragon\\www\\airvue\\resources\\assets\\js\\components\\planner\\sections\\modules\\Airports.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Airports.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-ca772618", Component.options)
+  } else {
+    hotAPI.reload("data-v-ca772618", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 81 */,
+/* 82 */,
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['active', 'airports'],
+	methods: {
+		goBack: function goBack() {
+			this.$emit('load', this.airports.links.prev);
+		},
+		goForward: function goForward() {
+			this.$emit('load', this.airports.links.next);
+		}
+	}
+});
+
+/***/ }),
+/* 84 */,
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(86);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("25f799e2", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca772618\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Airports.vue", function() {
+     var newContent = require("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca772618\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Airports.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.modal-card[data-v-ca772618] {\n  min-width: 1000px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    class: {
+      'modal': true, 'is-active': _vm.active
+    }
+  }, [_c('div', {
+    staticClass: "modal-background",
+    on: {
+      "click": function($event) {
+        _vm.$emit('closed')
+      }
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "modal-card"
+  }, [_c('header', {
+    staticClass: "modal-card-head"
+  }, [_c('p', {
+    staticClass: "modal-card-title"
+  }, [_vm._v("\n\t\t\t\tAirports\n\t\t\t")]), _vm._v(" "), _c('button', {
+    staticClass: "delete",
+    attrs: {
+      "aria-label": "close"
+    },
+    on: {
+      "click": function($event) {
+        _vm.$emit('closed')
+      }
+    }
+  })]), _vm._v(" "), _c('section', {
+    staticClass: "modal-card-body is-flex is-centered"
+  }, [_c('table', {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_vm._l((_vm.airports.data), function(airport) {
+    return _c('tr', {
+      key: airport.icao
+    }, [_c('td', [_c('span', {
+      staticClass: "tag is-primary"
+    }, [_vm._v(_vm._s(airport.icao))])]), _vm._v(" "), _c('td', [_c('span', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (airport.iata),
+        expression: "airport.iata"
+      }],
+      staticClass: "tag is-light"
+    }, [_vm._v(_vm._s(airport.iata))])]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.city))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.country))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.lat))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(airport.long))])])
+  }), _vm._v(" "), (!_vm.airports.data.length) ? _c('tr', [_vm._m(1)]) : _vm._e()], 2)])]), _vm._v(" "), _c('footer', {
+    staticClass: "modal-card-foot is-flex is-centered"
+  }, [_c('div', {
+    staticClass: "field is-grouped is-grouped-centered"
+  }, [_c('div', {
+    staticClass: "control"
+  }, [_c('button', {
+    staticClass: "button is-primary",
+    attrs: {
+      "disabled": !_vm.airports.links.prev
+    },
+    on: {
+      "click": _vm.goBack
+    }
+  }, [_vm._v("Previous")])]), _vm._v(" "), _c('div', {
+    staticClass: "control"
+  }, [_c('button', {
+    staticClass: "button is-primary",
+    attrs: {
+      "disabled": !_vm.airports.links.next
+    },
+    on: {
+      "click": _vm.goForward
+    }
+  }, [_vm._v("Next")])])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('th', [_vm._v("ICAO")]), _vm._v(" "), _c('th', [_vm._v("IATA")]), _vm._v(" "), _c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("City")]), _vm._v(" "), _c('th', [_vm._v("Country")]), _vm._v(" "), _c('th', [_vm._v("Latitude")]), _vm._v(" "), _c('th', [_vm._v("Longitude")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('td', {
+    staticClass: "has-text-centered",
+    attrs: {
+      "colspan": "7"
+    }
+  }, [_c('i', [_vm._v("Sorry, we couldn't find any airports for this search.")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-ca772618", module.exports)
+  }
+}
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(89)
+}
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(91),
+  /* template */
+  __webpack_require__(92),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-d2917172",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\laragon\\www\\airvue\\resources\\assets\\js\\components\\planner\\sections\\modules\\Flights.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Flights.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d2917172", Component.options)
+  } else {
+    hotAPI.reload("data-v-d2917172", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(90);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("1548522c", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d2917172\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flights.vue", function() {
+     var newContent = require("!!../../../../../../../node_modules/css-loader/index.js!../../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d2917172\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flights.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.modal-card[data-v-d2917172] {\n  min-width: 1000px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['active', 'flights'],
+	methods: {
+		goBack: function goBack() {
+			this.$emit('load', this.flights.links.prev);
+		},
+		goForward: function goForward() {
+			this.$emit('load', this.flights.links.next);
+		}
+	}
+});
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    class: {
+      'modal': true, 'is-active': _vm.active
+    }
+  }, [_c('div', {
+    staticClass: "modal-background",
+    on: {
+      "click": function($event) {
+        _vm.$emit('closed')
+      }
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "modal-card"
+  }, [_c('header', {
+    staticClass: "modal-card-head"
+  }, [_c('p', {
+    staticClass: "modal-card-title"
+  }, [_vm._v("\n\t\t\t\tFlights\n\t\t\t")]), _vm._v(" "), _c('button', {
+    staticClass: "delete",
+    attrs: {
+      "aria-label": "close"
+    },
+    on: {
+      "click": function($event) {
+        _vm.$emit('closed')
+      }
+    }
+  })]), _vm._v(" "), _c('section', {
+    staticClass: "modal-card-body is-flex is-centered"
+  }, [_c('table', {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', [_vm._l((_vm.flights.data), function(flight) {
+    return _c('tr', {
+      key: flight.number
+    }, [_c('td', [_c('span', {
+      staticClass: "tag is-primary"
+    }, [_vm._v(_vm._s(flight.number))])]), _vm._v(" "), _c('td', [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(flight.origin.city) + ", " + _vm._s(flight.origin.country) + "\n\t\t\t\t\t\t\t"), _c('span', {
+      staticClass: "tag is-light",
+      attrs: {
+        "title": flight.origin.name
+      }
+    }, [_vm._v(_vm._s(flight.origin.icao))])]), _vm._v(" "), _c('td', [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(flight.destination.city) + ", " + _vm._s(flight.destination.country) + "\n\t\t\t\t\t\t\t"), _c('span', {
+      staticClass: "tag is-light",
+      attrs: {
+        "title": flight.destination.name
+      }
+    }, [_vm._v(_vm._s(flight.destination.icao))])]), _vm._v(" "), _c('td', [_vm._v(_vm._s(flight.airline))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(flight.departed_at.date.substring(0, 16)))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(flight.hours) + "h " + _vm._s(flight.minutes) + "m")])])
+  }), _vm._v(" "), (!_vm.flights.data.length) ? _c('tr', [_vm._m(1)]) : _vm._e()], 2)])]), _vm._v(" "), _c('footer', {
+    staticClass: "modal-card-foot is-flex is-centered"
+  }, [_c('div', {
+    staticClass: "field is-grouped is-grouped-centered"
+  }, [_c('div', {
+    staticClass: "control"
+  }, [_c('button', {
+    staticClass: "button is-primary",
+    attrs: {
+      "disabled": !_vm.flights.links.prev
+    },
+    on: {
+      "click": _vm.goBack
+    }
+  }, [_vm._v("Previous")])]), _vm._v(" "), _c('div', {
+    staticClass: "control"
+  }, [_c('button', {
+    staticClass: "button is-primary",
+    attrs: {
+      "disabled": !_vm.flights.links.next
+    },
+    on: {
+      "click": _vm.goForward
+    }
+  }, [_vm._v("Next")])])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('th', [_vm._v("Number")]), _vm._v(" "), _c('th', [_vm._v("From")]), _vm._v(" "), _c('th', [_vm._v("To")]), _vm._v(" "), _c('th', [_vm._v("Airline")]), _vm._v(" "), _c('th', [_vm._v("Date")]), _vm._v(" "), _c('th', [_vm._v("Duration")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('td', {
+    staticClass: "has-text-centered",
+    attrs: {
+      "colspan": "6"
+    }
+  }, [_c('i', [_vm._v("Sorry, we couldn't find any flights for this search.")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-d2917172", module.exports)
+  }
+}
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(94)
+}
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(96),
+  /* template */
+  __webpack_require__(97),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -14169,13 +14368,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 69 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(70);
+var content = __webpack_require__(95);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -14195,7 +14394,7 @@ if(false) {
 }
 
 /***/ }),
-/* 70 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -14209,7 +14408,7 @@ exports.push([module.i, "\narticle.media[data-v-5f95055c] {\n  margin: 20px 0;\n
 
 
 /***/ }),
-/* 71 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14288,7 +14487,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 72 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14355,179 +14554,6 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-5f95055c", module.exports)
   }
 }
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('section', {
-    staticClass: "section"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "box"
-  }, [_c('form', {
-    on: {
-      "submit": function($event) {
-        $event.preventDefault();
-        _vm.addFlight($event)
-      }
-    }
-  }, [_c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.error),
-      expression: "error"
-    }],
-    staticClass: "notification is-danger"
-  }, [_c('button', {
-    staticClass: "delete",
-    on: {
-      "click": function($event) {
-        $event.preventDefault();
-        _vm.error = ''
-      }
-    }
-  }), _vm._v(" "), _c('strong', [_vm._v("Snap!")]), _vm._v(" " + _vm._s(_vm.error) + "\n\t\t\t")]), _vm._v(" "), _c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column"
-  }, [_c('div', {
-    staticClass: "field"
-  }, [_c('label', {
-    staticClass: "label"
-  }, [_vm._v("Flight Number")]), _vm._v(" "), _c('div', {
-    staticClass: "control"
-  }, [_c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.number),
-      expression: "number"
-    }],
-    staticClass: "input",
-    attrs: {
-      "placeholder": "ex: 02AWSV (Hint: use the 'Find a Flight' tool above)",
-      "required": ""
-    },
-    domProps: {
-      "value": (_vm.number)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.number = $event.target.value
-      }
-    }
-  })])])]), _vm._v(" "), _vm._m(1)])]), _vm._v(" "), _c('hr', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.trip.flights.length),
-      expression: "trip.flights.length"
-    }]
-  }), _vm._v(" "), _vm._l((_vm.trip.flights), function(flight) {
-    return _c('flight', {
-      key: flight.number,
-      attrs: {
-        "flight": flight
-      },
-      on: {
-        "deleted": _vm.deleteFlight
-      }
-    })
-  })], 2)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('h1', {
-    staticClass: "title"
-  }, [_c('span', {
-    staticClass: "icon is-medium"
-  }, [_c('i', {
-    staticClass: "fa fa-globe",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  })]), _vm._v("\n\n\t\tManage Flights\n\t")])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "column is-1 is-flex is-centered"
-  }, [_c('div', {
-    staticClass: "field"
-  }, [_c('button', {
-    staticClass: "button is-large is-primary"
-  }, [_c('span', {
-    staticClass: "icon is-large"
-  }, [_c('i', {
-    staticClass: "fa fa-plus",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  })])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-21499e2e", module.exports)
-  }
-}
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('airport-finder'), _vm._v(" "), _c('flight-finder'), _vm._v(" "), _c('flight-manager')], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6de6a0c4", module.exports)
-  }
-}
-
-/***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('section', {
-    staticClass: "hero is-fullheight is-primary is-bold"
-  }, [_c('div', {
-    staticClass: "hero-body"
-  }, [_c('div', {
-    staticClass: "container"
-  }, [(_vm.active) ? [_c('app')] : _c('div', {
-    staticClass: "has-text-centered"
-  }, [_c('h1', {
-    staticClass: "title is-1 is-spaced"
-  }, [_vm._v("\n\t\t\t\t\tAirvue\n\t\t\t\t")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('button', {
-    staticClass: "button is-primary is-inverted is-outlined is-large is-cta",
-    on: {
-      "click": function($event) {
-        _vm.active = true
-      }
-    }
-  }, [_vm._v("\n\t\t\t\t\tGet Started Now\n\t\t\t\t")])])], 2)])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('h2', {
-    staticClass: "subtitle"
-  }, [_c('em', [_vm._v("Plan your Dream Trip today.")])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-443d712f", module.exports)
-  }
-}
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

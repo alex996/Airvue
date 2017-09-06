@@ -74,7 +74,7 @@
     GET /api/airports?city=Paris&country=FR
     ```
 
-* List Air Canada flights from Montreal to Toronto on Sep. 8 (Note, 'CA' is optional)
+* List Air Canada flights from Montreal to Toronto on Sep. 8 (Note, `CA` is optional)
 
     ```bash
     GET /api/flights?from=Montreal,%20CA&to=Toronto,%20CA&airline=Air%20Canada&date=2017-09-08
@@ -130,7 +130,7 @@ When you run `php artisan migrate --seed`, Laravel will run two seeder classes:
 * `AirportsTableSeeder` - reads data from `airports.json` and batch-inserts airport records in chunks of 1000;
 * `FlightsTableSeeder` - reads data from `airlines.json` and batch-inserts flight records in chunks of 1000.
 
-Given that there are 28k+ airport records, it'd be impractical to generate flights for every possible geo location. Instead, for demonstration purposes, `FlightsTableSeeder` generates random flights for the *10 biggest Canadian cities* with departure dates ranging between *now* and *one month from now* in the future.
+Given that there are 28k+ airport records, it would be impractical to generate flights for every possible geo location. Instead, for demonstration purposes, `FlightsTableSeeder` generates random flights for the *10 biggest Canadian cities* with departure dates ranging between *now* and *one month from now* in the future.
 
 ### JSON Data Store
 
@@ -138,3 +138,5 @@ Two external sources were used as static data stores:
 
 * [mwgg/Airports](https://github.com/mwgg/Airports) - JSON database of the real-world airports;
 * [SkyTrax](http://www.worldairlineawards.com/awards/world_airline_rating.html) - the World's Top 100 Airlines in 2017 list.
+
+The two json files are already included under `/storage/app/aviation`.
