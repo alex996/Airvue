@@ -21,7 +21,7 @@
 
     ```bash
     cp .env.example .env
-    vim .env
+    vi .env
     ```
 
 4) Generate an application key:
